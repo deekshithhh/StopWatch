@@ -1,0 +1,11 @@
+.stopclock {
+  margin: 20px 0;
+}
+.bttn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.Border{
+    border-color: black;
+}
