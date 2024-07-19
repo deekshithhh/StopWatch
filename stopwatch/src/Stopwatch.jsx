@@ -33,15 +33,15 @@ export default function Stopwatch() {
   const formatTime = (elapsedTime) => {
     const minutes = Math.floor(elapsedTime / 60);
     const seconds = elapsedTime % 60;
-    return `${minutes.toString().padStart(2, "0")}:${seconds
+    return `${minutes.toString().padStart(1, "0")}:${seconds
       .toString()
       .padStart(2, "0")}`;
   };
 
   return (
-    <div className={styles.Border}>
+    <div >
       <h1>Stopwatch</h1>
-      <h1 className={styles.stopclock}>{formatTime(elapsedTime)}</h1>
+      <div className={styles.stopclock}>Time: {formatTime(elapsedTime)}</div>
       <div className={styles.bttn}>
         <button onClick={handleStartStop}>{running ? "Stop" : "Start"}</button>
         <button onClick={handleReset}>Reset</button>
